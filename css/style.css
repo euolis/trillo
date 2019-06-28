@@ -155,6 +155,80 @@ body {
   padding: 2.5rem;
   text-align: center; }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block;
+    width: 100%; }
+
+.overview {
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  display: flex; }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase; }
+  .overview__icon-star, .overview__icon-location {
+    fill: var(--color-primary);
+    height: 1.75rem;
+    width: 1.75rem; }
+  .overview__icon-location {
+    margin-right: .5rem; }
+  .overview__location {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem; }
+  .overview__rating {
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+    padding: 0 2.25rem; }
+  .overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px; }
+  .overview__rating-count {
+    font-size: .8rem;
+    text-transform: uppercase; }
+  .overview__stars {
+    display: flex;
+    margin-right: auto; }
+
+.btn-inline {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  padding-bottom: 2px;
+  transition: all .2s; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-inline:focus {
+    animation: pulsate 1s infinite;
+    outline: none; }
+
+@keyframes pulsate {
+  0% {
+    box-shadow: none;
+    transform: scale(1); }
+  50% {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+    transform: scale(1.05); }
+  100% {
+    box-shadow: none;
+    transform: scale(1); } }
+
 .container {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
@@ -165,13 +239,14 @@ body {
 .header {
   align-items: center;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
   display: flex;
   font-size: 1.4rem;
   height: 7rem;
   justify-content: space-between; }
 
 .content {
+  background-color: #fff;
   display: flex; }
 
 .sidebar {
@@ -182,6 +257,5 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: orangered;
   flex: 1;
   height: 80rem; }
